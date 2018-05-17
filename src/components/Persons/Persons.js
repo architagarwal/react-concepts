@@ -19,6 +19,8 @@ class Persons extends Component{
         console.log('[UPDATE Persons.js] Inside componentWillRecieveProps()', nextProps);
     }
 
+    //classes that extends PureComponent do not need to implement shouldComponentUpdate method.
+    //PureComponent performs a check for current props/state with previous props/state
     shouldComponentUpdate(nextProps, nextState){
         console.log('[UPDATE Persons.js] Inside shouldComponentUpdate()', nextProps, nextState);
         return nextProps.persons !== this.props.persons;
